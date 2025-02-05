@@ -14,3 +14,51 @@
   justify-content: center;
   width: 100px;
 }
+
+.nav-tooltip {
+  opacity: 0;
+  font-size: 18px;
+  color: #e2e2b6;
+  transition: opacity 0.2s ease; /* Smooth transition */
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 3px;
+  border-top: 1px solid #6eacda;
+  cursor: default;
+}
+
+.nav-item i {
+  font-size: 40px; /* Size of the icon */
+  color: #6eacda; /* Icon color */
+  transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.nav-item i:hover {
+  transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+.nav-item i:active {
+  transform: translateY(2px); /* Move down slightly */
+  filter: brightness(150%);
+}
+
+.nav-item i:hover + .nav-tooltip {
+  opacity: 1; /* Show tooltip when hovering over the icon */
+  border-top: 1px solid #6eacda;
+}
+
+/*Small screens (phones, etc.)*/
+@media (max-width: 767px) {
+  #navbar {
+    margin-top: 2.5%;
+    justify-content: center;
+  }
+
+  .nav-item i {
+    font-size: 32px;
+  }
+
+  .nav-tooltip {
+    font-size: 14px;
+  }
+}
