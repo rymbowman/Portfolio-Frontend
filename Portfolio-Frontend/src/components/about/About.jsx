@@ -1,4 +1,5 @@
 import AboutIntro from "./AboutIntro";
+import "./About.css";
 
 const About = () => {
   return (
