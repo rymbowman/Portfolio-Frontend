@@ -8,18 +8,18 @@ const FormItem = ({
   className,
   rows,
   value,
-  change,
+  onChange,
 }) => {
   return (
     <div className="form-row" id={id}>
       <input
         type={type}
-        className={`form-item ${className}`}
+        className={className}
         name={name}
         placeholder={placeholder}
         rows={rows}
         value={value}
-        onChange={change}
+        onChange={onChange}
       ></input>
     </div>
   );
@@ -33,6 +33,6 @@ FormItem.propTypes = {
   rows: PropTypes.number,
   className: PropTypes.string,
   value: PropTypes.string,
-  change: PropTypes.func,
+  onChange: PropTypes.func,
 };
 export default FormItem;
