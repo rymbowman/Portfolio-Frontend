@@ -1,1 +1,9 @@
-
+body {
+  background-color: #021526;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/homepage/HomePage";
 import Connectpage from "./pages/connectpage/Connectpage";
 import Mainlayout from "./layouts/Mainlayout";
+import "./App.css";
 
 function App() {
   return (
