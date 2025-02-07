@@ -1,3 +1,5 @@
+import "./Header.css";
+
 const HeaderGreeting = () => {
   return (
     <div className="intro-container">
