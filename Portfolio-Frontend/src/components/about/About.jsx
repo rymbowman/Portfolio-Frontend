@@ -7,8 +7,10 @@ const About = () => {
   return (
     <div className="about-container">
       <AboutIntro />
-      <AboutText />
-      <Slideshow />
+      <div className="about-body">
+        <AboutText />
+        <Slideshow />
+      </div>
     </div>
   );
 };
