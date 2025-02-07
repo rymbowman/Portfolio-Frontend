@@ -3,8 +3,8 @@ import "./Contacts.css";
 
 const Contacts = () => {
   return (
-    <div className="contact-methods">
-      <div className="contact-container">
+    <div className="contacts-container">
+      <div className="contact-item">
         <a
           href="https://github.com/rymbowman"
           target="_blank"
@@ -16,7 +16,7 @@ const Contacts = () => {
           <p className="contact-tooltip">Github</p>
         </a>
       </div>
-      <div className="contact-container">
+      <div className="contact-item">
         <a
           href="https://www.linkedin.com/in/ryanbowman24"
           target="_blank"
@@ -28,7 +28,7 @@ const Contacts = () => {
           <p className="contact-tooltip">LinkedIn</p>
         </a>
       </div>
-      <div className="contact-container">
+      <div className="contact-item">
         <Link to="/connect" id="email" className="contact-link">
           <i className={"bx bx-envelope contact-img"}></i>
           <p className="contact-tooltip">Email</p>

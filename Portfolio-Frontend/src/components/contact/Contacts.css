@@ -1,4 +1,4 @@
-.contact-methods {
+.contacts-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +11,9 @@
   width: 95%;
 }
 
-.contact-container {
-  width: 100px;
+.contact-item {
+  width: 15%;
+  height: 75px;
   display: flex;
   justify-content: center;
 }
