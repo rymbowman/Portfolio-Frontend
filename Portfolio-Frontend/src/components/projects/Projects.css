@@ -1,0 +1,138 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 75px;
+  width: 95%;
+  border: 1px solid white;
+}
+
+.projects-container-title {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  color: #e2e2b6;
+  font-size: 36px;
+  text-transform: uppercase;
+  border-bottom: #6eacda 2px solid;
+  padding: 2.5px 10px;
+}
+
+.tile-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-tile {
+  background: #021526;
+  border: 1px solid #e2e2b6;
+  color: #e2e2b6;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 40%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.project-title {
+  font-size: 24px;
+  color: #e2e2b6;
+  border-bottom: 2px solid #6eacda;
+  padding: 15px 0px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0;
+}
+
+.project-description {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 15px 0;
+  width: 90%;
+  margin: 0;
+}
+
+.multiple-github-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  padding: 15px 0;
+  align-items: center;
+  margin: 0;
+}
+
+.project-links a {
+  color: #6eacda;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.project-links a:hover {
+  color: #e2e2b6;
+}
+
+/* Medium Screens (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  #projects-title {
+    font-size: 32px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-links a {
+    font-size: 16px;
+  }
+}
+
+/* Small screens (phones, etc.) */
+@media (max-width: 767px) {
+  #projects-title {
+    font-size: 28px;
+  }
+
+  #projects-container {
+    gap: 20px;
+  }
+
+  .project-tile {
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-links a {
+    font-size: 14px;
+  }
+}
+
+/* smallest screens */
+@media (max-width: 575px) {
+  .projects-tileContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-tile {
+    width: 80%;
+    padding: 20px 10px;
+  }
+}

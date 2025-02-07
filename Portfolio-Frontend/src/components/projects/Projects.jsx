@@ -34,11 +34,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects-container" data-aos="fade-in">
-      <h2 id="projects-title" data-aos="fade-in">
-        Projects
-      </h2>
-      <div className="tile-container" data-aos="fade-in">
+    <div className="projects-container">
+      <h2 className="projects-container-title">Projects</h2>
+      <div className="tile-container">
         {projects.map((project) => (
           <div key={project.id} className="project-tile">
             <h3 className="project-title">{project.title}</h3>
