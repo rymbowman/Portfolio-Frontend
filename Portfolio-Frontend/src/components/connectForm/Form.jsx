@@ -1,7 +1,9 @@
 import FormItem from "./FormItem";
+import { useState } from "react";
 import "./Form.css";
-
 const Form = () => {
+  const [contactReason, setContactReason] = useState("");
+
   return (
     <form className="form">
       <div className="names-row">
@@ -10,21 +12,21 @@ const Form = () => {
           name={"fname"}
           placeholder={"First Name"}
           id={"first-name"}
-          className={getInputClass("fname")}
+          className=""
         />
         <FormItem
           type={"text"}
           name={"lname"}
           placeholder={"Last Name"}
           id={"last-name"}
-          className={getInputClass("lname")}
+          className=""
         />
       </div>
       <FormItem
         type={"email"}
         name={"email"}
         placeholder={"Email"}
-        className={getInputClass("email")}
+        className=""
       />
       <FormItem
         type={"phone"}
@@ -33,25 +35,27 @@ const Form = () => {
         name={"phone"}
         className={"form-item"}
       />
-      <div className={getInputClass("contactReason")}>
+      <div className={`contact-reason`}>
         <div id="website-design">
           <label htmlFor="website-design">Website Design</label>
-          <input
-            type="radio"
-            name="contactReason"
-            className={`radio-dial ${getInputClass("contactReason")}`}
-            value={"website design"}
-            onChange={(e) => setContactReason(e.target.value)}
+          <FormItem
+            type={"radio"}
+            id={"design"}
+            name={"contactReason"}
+            className={`radio-dial`}
+            value={"design"}
+            change={(e) => setContactReason(e.target.value)}
           />
         </div>
         <div id="schedule-interview">
           <label htmlFor="interview">Schedule Interview</label>
-          <input
-            type="radio"
-            name="contactReason"
-            className={`radio-dial ${getInputClass("contactReason")}`}
-            value={"schedule interview"}
-            onChange={(e) => setContactReason(e.target.value)}
+          <FormItem
+            type={"radio"}
+            id={"interview"}
+            name={"contactReason"}
+            className={`radio-dial`}
+            value={"interview"}
+            change={(e) => setContactReason(e.target.value)}
           />
         </div>
       </div>
@@ -59,12 +63,12 @@ const Form = () => {
         type={"text"}
         name={"subject"}
         placeholder={"Subject"}
-        className={getInputClass("subject")}
+        className=""
       />
       <div className="form-row">
         <textarea
           type="message"
-          className={getInputClass("message")}
+          className=""
           name="message"
           rows="5"
           placeholder="Type message here"

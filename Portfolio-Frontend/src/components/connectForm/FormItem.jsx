@@ -1,6 +1,15 @@
 import PropTypes from "prop-types";
 import "./Form.css";
-const FormItem = ({ type, placeholder, name, id, className, rows }) => {
+const FormItem = ({
+  type,
+  placeholder,
+  name,
+  id,
+  className,
+  rows,
+  value,
+  change,
+}) => {
   return (
     <div className="form-row" id={id}>
       <input
@@ -9,6 +18,8 @@ const FormItem = ({ type, placeholder, name, id, className, rows }) => {
         name={name}
         placeholder={placeholder}
         rows={rows}
+        value={value}
+        onChange={change}
       ></input>
     </div>
   );
@@ -21,5 +32,7 @@ FormItem.propTypes = {
   id: PropTypes.string,
   rows: PropTypes.number,
   className: PropTypes.string,
+  value: PropTypes.string,
+  change: PropTypes.func,
 };
 export default FormItem;
