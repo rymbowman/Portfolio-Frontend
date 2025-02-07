@@ -1,77 +1,77 @@
 import FormItem from "./FormItem";
-import { useState } from "react";
-import "./Form.css";
-const Form = () => {
-  const [contactReason, setContactReason] = useState("");
 
+import "./Form.css";
+import ContactReason from "./ContactReason";
+import PropTypes from "prop-types";
+const Form = ({
+  formData,
+  handleChange,
+  getInputClass,
+  handleSubmit,
+  setContactReason,
+  emailError,
+}) => {
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <div className="names-row">
         <FormItem
           type={"text"}
-          name={"fname"}
+          name={"fName"}
           placeholder={"First Name"}
           id={"first-name"}
-          className=""
+          className={`form-item ${getInputClass("fName")}`}
+          value={formData.fName}
+          onChange={handleChange}
         />
         <FormItem
           type={"text"}
-          name={"lname"}
+          name={"lName"}
           placeholder={"Last Name"}
           id={"last-name"}
-          className=""
+          className={`form-item ${getInputClass("lName")}`}
+          value={formData.lName}
+          onChange={handleChange}
         />
       </div>
+      {emailError && <p className="error-message">{emailError}</p>}
       <FormItem
         type={"email"}
         name={"email"}
         placeholder={"Email"}
-        className=""
+        className={`form-item ${getInputClass("email")}`}
+        value={formData.email}
+        onChange={handleChange}
       />
       <FormItem
         type={"phone"}
         placeholder={"Phone"}
         id={"phone"}
         name={"phone"}
-        className={"form-item"}
+        className="form-item"
+        value={formData.phone}
+        onChange={handleChange}
       />
-      <div className={`contact-reason`}>
-        <div id="website-design">
-          <label htmlFor="website-design">Website Design</label>
-          <FormItem
-            type={"radio"}
-            id={"design"}
-            name={"contactReason"}
-            className={`radio-dial`}
-            value={"design"}
-            change={(e) => setContactReason(e.target.value)}
-          />
-        </div>
-        <div id="schedule-interview">
-          <label htmlFor="interview">Schedule Interview</label>
-          <FormItem
-            type={"radio"}
-            id={"interview"}
-            name={"contactReason"}
-            className={`radio-dial`}
-            value={"interview"}
-            change={(e) => setContactReason(e.target.value)}
-          />
-        </div>
-      </div>
+      <ContactReason
+        setContactReason={setContactReason}
+        getInputClass={getInputClass}
+      />
       <FormItem
         type={"text"}
         name={"subject"}
         placeholder={"Subject"}
-        className=""
+        className={`form-item ${getInputClass("subject")}`}
+        value={formData.subject}
+        onChange={handleChange}
       />
       <div className="form-row">
         <textarea
           type="message"
-          className=""
+          className={`form-item ${getInputClass("message")}`}
           name="message"
           rows="5"
           placeholder="Type message here"
+          value={formData.message}
+          onChange={handleChange}
         ></textarea>
       </div>
       <button type="submit" className="btn btn-primary" id="btn-contact">
@@ -81,4 +81,12 @@ const Form = () => {
   );
 };
 
+Form.propTypes = {
+  formData: PropTypes.object,
+  handleChange: PropTypes.func,
+  getInputClass: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  setContactReason: PropTypes.func,
+  emailError: PropTypes.string,
+};
 export default Form;
