@@ -27,7 +27,7 @@ const Connectpage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate form data
     const invalidFields = [];
@@ -44,9 +44,34 @@ const Connectpage = () => {
       return;
     }
 
-    // Submit form data
-    setFormSubmitted(true);
-    setSuccess("Thank you for connecting!");
+    const { fName, lName, email, phone, contactReason, subject, message } =
+      formData;
+
+    try {
+      await fetch("/api/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fName,
+          lName,
+          email,
+          phone,
+          contactReason,
+          subject,
+          message,
+        }),
+      });
+
+      // Submit form data
+      setFormSubmitted(true);
+      setSuccess("Thank you for connecting!");
+      setError("");
+      setInvalidFields([]);
+    } catch (err) {
+      setError("Error, please try again later.", err);
+    }
   };
 
   const getInputClass = (name) => {
