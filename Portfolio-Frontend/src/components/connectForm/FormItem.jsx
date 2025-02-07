@@ -5,7 +5,7 @@ const FormItem = ({ type, placeholder, name, id, className, rows }) => {
     <div className="form-row" id={id}>
       <input
         type={type}
-        className={className}
+        className={`form-item ${className}`}
         name={name}
         placeholder={placeholder}
         rows={rows}
