@@ -66,6 +66,7 @@ const Connectpage = () => {
             handleChange={handleChange}
             getInputClass={getInputClass}
             setContactReason={setContactReason}
+            contactReason={contactReason}
             emailError={emailError}
             handleSubmit={handleSubmit}
           />
