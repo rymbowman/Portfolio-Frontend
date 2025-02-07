@@ -1,6 +1,8 @@
+import "./AboutIntro.css";
+
 const AboutIntro = () => {
   return (
-    <div id="about-section-intro">
+    <div className="about-intro">
       <p>
         Thanks for visiting! Trust is key to any relationship, so here is a bit
         about me...
