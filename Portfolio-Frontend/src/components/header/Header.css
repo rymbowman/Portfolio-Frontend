@@ -5,7 +5,8 @@
   justify-content: center;
   gap: 15px;
   margin-top: 150px;
-  width: 100%;
+  width: 95%;
+  border: 1px solid white;
 }
 
 .header-title {
@@ -34,7 +35,8 @@
   justify-content: space-between;
   font-size: 24px;
   margin-top: 100px;
-  width: 90%;
+  width: 95%;
+  border: 1px solid white;
 }
 
 .career-field {
@@ -51,4 +53,84 @@
   color: #6eacda;
   width: 90%;
   padding-left: 50px;
+}
+
+/*Medium Screens (tablets)*/
+@media (max-width: 1199px) and (min-width: 768px) {
+  .intro-container {
+    margin-top: 125px;
+  }
+
+  #name {
+    font-size: 55px;
+  }
+
+  .career-field {
+    border-right: 3px solid #e2e2b6;
+  }
+
+  .bio-content {
+    width: 90%;
+  }
+}
+
+/*Small screens (phones, etc.)*/
+@media (max-width: 767px) {
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 75px;
+    gap: 0;
+  }
+
+  .header-title {
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  #greeting {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  #name {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .bio-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .career-field {
+    border-right: none;
+    padding: 20px 50px;
+    border-bottom: 3px solid #e2e2b6;
+  }
+
+  .bio-content {
+    padding: 0;
+    width: 90%;
+  }
+}
+
+/* smallest screens */
+@media (max-width: 575px) {
+  #name {
+    font-size: 30px;
+  }
+
+  .career-field {
+    padding: 20px 25px;
+  }
+
+  .bio-content {
+    width: 90%;
+    font-size: 20px;
+  }
 }
