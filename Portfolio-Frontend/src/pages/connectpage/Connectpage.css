@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+/*Large screens (desktops)*/
+.connectpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 95%;
+  margin: auto;
+}
+
+.form-container {
+  border: 2px solid #e2e2b6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.page-heading {
+  font-size: 32px;
+  color: #6eacda; /* Dark text color for readability */
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+
+.success-message {
+  font-size: 40px;
+  color: white;
+  font-family: "Roboto slab", serif;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+/*Small screens (phones, etc.)*/
+@media (max-width: 767px) {
+  .form-container {
+    width: 85%;
+  }
+
+  .page-heading {
+    font-size: 24px;
+  }
+  #error-message {
+    font-size: 0.8em;
+  }
+}
