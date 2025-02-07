@@ -32,7 +32,19 @@ const Slideshow = () => {
     };
   }, [currentSlideIndex]);
 
-  return <div>Slideshow</div>;
+  return (
+    <div className="slideshow-images-container">
+      {slides.map((slide, index) => (
+        <img
+          className={`carousel-img ${
+            index === currentSlideIndex ? "active" : ""
+          }`}
+          src={slide}
+          key={index}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default Slideshow;
