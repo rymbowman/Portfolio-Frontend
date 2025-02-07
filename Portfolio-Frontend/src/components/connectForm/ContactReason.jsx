@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "./Form.css";
-const ContactReason = ({ setContactReason, getInputClass }) => (
+const ContactReason = ({ setContactReason, getInputClass, contactReason }) => (
   <div className={`contact-reason ${getInputClass("contactReason")}`}>
     <div id="website-design">
       <label htmlFor="website-design">Website Design</label>
@@ -8,7 +8,8 @@ const ContactReason = ({ setContactReason, getInputClass }) => (
         type="radio"
         name="contactReason"
         className={`radio-dial ${getInputClass("contactReason")}`}
-        value={"website design"}
+        value={"design"}
+        checked={contactReason === "design"}
         onChange={(e) => setContactReason(e.target.value)}
       />
     </div>
@@ -18,7 +19,8 @@ const ContactReason = ({ setContactReason, getInputClass }) => (
         type="radio"
         name="contactReason"
         className={`radio-dial ${getInputClass("contactReason")}`}
-        value={"schedule interview"}
+        value={"interview"}
+        checked={contactReason === "interview"}
         onChange={(e) => setContactReason(e.target.value)}
       />
     </div>
@@ -28,5 +30,6 @@ const ContactReason = ({ setContactReason, getInputClass }) => (
 ContactReason.propTypes = {
   setContactReason: PropTypes.func,
   getInputClass: PropTypes.func,
+  contactReason: PropTypes.string,
 };
 export default ContactReason;

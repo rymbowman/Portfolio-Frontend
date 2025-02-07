@@ -9,6 +9,7 @@ const Form = ({
   getInputClass,
   handleSubmit,
   setContactReason,
+  contactReason,
   emailError,
 }) => {
   return (
@@ -54,6 +55,7 @@ const Form = ({
       <ContactReason
         setContactReason={setContactReason}
         getInputClass={getInputClass}
+        contactReason={contactReason}
       />
       <FormItem
         type={"text"}
@@ -87,6 +89,7 @@ Form.propTypes = {
   getInputClass: PropTypes.func,
   handleSubmit: PropTypes.func,
   setContactReason: PropTypes.func,
+  contactReason: PropTypes.string,
   emailError: PropTypes.string,
 };
 export default Form;
