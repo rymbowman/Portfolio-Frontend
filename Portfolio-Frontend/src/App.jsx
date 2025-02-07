@@ -1,20 +1,24 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Homepage from "./pages/homepage/HomePage";
 import Connectpage from "./pages/connectpage/Connectpage";
 import Mainlayout from "./layouts/Mainlayout";
 import "./App.css";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Mainlayout />}>
+      <Route index element={<Homepage />} />
+      <Route path="/contact" element={<Connectpage />} />
+    </Route>
+  )
+);
 function App() {
-  return (
-    <Router>
-      <Mainlayout>
-        <Routes>
-          <Route path="/" Component={<Homepage />} />
-          <Route path="/contact" Component={<Connectpage />} />
-        </Routes>
-      </Mainlayout>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
