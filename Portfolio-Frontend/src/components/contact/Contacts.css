@@ -1,0 +1,68 @@
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: fit-content;
+  gap: 15px;
+  padding-top: 25px;
+  border-top: 1px solid white;
+  width: 95%;
+}
+
+.contact-container {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-img {
+  font-size: 40px;
+  color: white;
+}
+
+.contact-tooltip {
+  opacity: 0;
+  font-size: 18px;
+  color: white;
+  transition: opacity 0.2s ease; /* Smooth transition */
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 3px;
+}
+
+.contact-img:hover + .contact-tooltip {
+  opacity: 1; /* Show tooltip when hovering over the icon */
+  border-top: 1px solid #6eacda;
+}
+
+/*Medium Screens (tablets)*/
+@media (max-width: 1199px) and (min-width: 768px) {
+  .contact-methods {
+    gap: 0;
+  }
+}
+
+/*Small screens (phones, etc.)*/
+@media (max-width: 767px) {
+  .contact-methods {
+    gap: 0;
+  }
+
+  .contact-tooltip {
+    font-size: 14px;
+  }
+
+  .contact-img {
+    font-size: 32px;
+  }
+}
