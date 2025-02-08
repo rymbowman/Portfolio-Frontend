@@ -1,34 +1,39 @@
 import PropTypes from "prop-types";
 import "./Form.css";
-const ContactReason = ({ setContactReason, getInputClass, contactReason }) => (
-  <div className={`contact-reason ${getInputClass("contactReason")}`}>
-    <div id="website-design">
-      <label htmlFor="website-design">Website Design</label>
-      <input
-        type="radio"
-        name="contactReason"
-        className={`radio-dial ${getInputClass("contactReason")}`}
-        value={"design"}
-        checked={contactReason === "design"}
-        onChange={(e) => setContactReason(e.target.value)}
-      />
+const ContactReason = ({
+  onChange,
+  getInputClass,
+  contactReason,
+}) => {
+  const options = [
+    { id: "website-design", label: "Website Design", value: "design" },
+    {
+      id: "schedule-interview",
+      label: "Schedule Interview",
+      value: "interview",
+    },
+  ];
+  return (
+    <div className={`contact-reason ${getInputClass("contactReason")}`}>
+      {options.map((option) => (
+        <div key={option.id} id={option.id}>
+          <label htmlFor={option.id}>{option.label}</label>
+          <input
+            type="radio"
+            name="contactReason"
+            className={`radio-dial ${getInputClass("contactReason")}`}
+            value={option.value}
+            checked={contactReason === option.value}
+            onChange={onChange}
+          />
+        </div>
+      ))}
     </div>
-    <div id="schedule-interview">
-      <label htmlFor="interview">Schedule Interview</label>
-      <input
-        type="radio"
-        name="contactReason"
-        className={`radio-dial ${getInputClass("contactReason")}`}
-        value={"interview"}
-        checked={contactReason === "interview"}
-        onChange={(e) => setContactReason(e.target.value)}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 ContactReason.propTypes = {
-  setContactReason: PropTypes.func,
+  onChange: PropTypes.func,
   getInputClass: PropTypes.func,
   contactReason: PropTypes.string,
 };
