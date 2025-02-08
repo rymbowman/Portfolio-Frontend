@@ -1,10 +1,6 @@
 import PropTypes from "prop-types";
 import "./Form.css";
-const ContactReason = ({
-  onChange,
-  getInputClass,
-  contactReason,
-}) => {
+const ContactReason = ({ onChange, getInputClass, contactReason }) => {
   const options = [
     { id: "website-design", label: "Website Design", value: "design" },
     {
@@ -14,20 +10,25 @@ const ContactReason = ({
     },
   ];
   return (
-    <div className={`contact-reason ${getInputClass("contactReason")}`}>
-      {options.map((option) => (
-        <div key={option.id} id={option.id}>
-          <label htmlFor={option.id}>{option.label}</label>
-          <input
-            type="radio"
-            name="contactReason"
-            className={`radio-dial ${getInputClass("contactReason")}`}
-            value={option.value}
-            checked={contactReason === option.value}
-            onChange={onChange}
-          />
-        </div>
-      ))}
+    <div
+      className={`contact-reason-container ${getInputClass("contactReason")}`}
+    >
+      <p className="contact-reason-heading">*Contact Reason</p>
+      <div className="contact-reason">
+        {options.map((option) => (
+          <div key={option.id} id={option.id}>
+            <label htmlFor={option.id}>{option.label}</label>
+            <input
+              type="radio"
+              name="contactReason"
+              className={`radio-dial ${getInputClass("contactReason")}`}
+              value={option.value}
+              checked={contactReason === option.value}
+              onChange={onChange}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
