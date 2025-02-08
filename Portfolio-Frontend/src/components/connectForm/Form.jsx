@@ -8,9 +8,7 @@ const Form = ({
   handleChange,
   getInputClass,
   handleSubmit,
-  setContactReason,
-  contactReason,
-  emailError,
+  error,
 }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -34,7 +32,7 @@ const Form = ({
           onChange={handleChange}
         />
       </div>
-      {emailError && <p className="error-message">{emailError}</p>}
+      {error && <p className="error-message">{error}</p>}
       <FormItem
         type={"email"}
         name={"email"}
@@ -53,9 +51,9 @@ const Form = ({
         onChange={handleChange}
       />
       <ContactReason
-        setContactReason={setContactReason}
+        onChange={handleChange}
         getInputClass={getInputClass}
-        contactReason={contactReason}
+        contactReason={formData.contactReason}
       />
       <FormItem
         type={"text"}
@@ -88,8 +86,6 @@ Form.propTypes = {
   handleChange: PropTypes.func,
   getInputClass: PropTypes.func,
   handleSubmit: PropTypes.func,
-  setContactReason: PropTypes.func,
-  contactReason: PropTypes.string,
-  emailError: PropTypes.string,
+  error: PropTypes.string,
 };
 export default Form;
