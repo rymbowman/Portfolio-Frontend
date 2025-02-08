@@ -45,9 +45,6 @@ const Connectpage = () => {
     if (!formData.email) {
       invalidFields.push("email");
     }
-    if (!formData.phone) {
-      invalidFields.push("phone");
-    }
     if (!formData.contactReason) {
       invalidFields.push("contactReason");
     }
