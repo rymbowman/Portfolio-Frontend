@@ -12,34 +12,55 @@ const Connectpage = () => {
     subject: "",
     message: "",
   });
-  const [contactReason, setContactReason] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [invalidFields, setInvalidFields] = useState([]);
-  const [emailError, setEmailError] = useState("");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    const { name, value, type } = e.target;
+    if (type === "radio") {
+      setFormData((prevData) => ({
+        ...prevData,
+        contactReason: value,
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate form data
     const invalidFields = [];
+    if (!formData.fName) {
+      invalidFields.push("fName");
+    }
+    if (!formData.lName) {
+      invalidFields.push("lName");
+    }
     if (!formData.email) {
-      setEmailError("Email is required");
       invalidFields.push("email");
-    } else {
-      setEmailError("");
+    }
+    if (!formData.phone) {
+      invalidFields.push("phone");
+    }
+    if (!formData.contactReason) {
+      invalidFields.push("contactReason");
+    }
+    if (!formData.subject) {
+      invalidFields.push("subject");
+    }
+    if (!formData.message) {
+      invalidFields.push("message");
     }
 
     if (invalidFields.length > 0) {
       setInvalidFields(invalidFields);
+      console.log(invalidFields);
       setError("Please fill in all required fields");
       return;
     }
@@ -85,15 +106,12 @@ const Connectpage = () => {
       ) : (
         <div className="form-container">
           <h1 className="page-heading">{"Let's Connect!"}</h1>
-          {error && <p className="error-message">{error}</p>}
           <Form
             formData={formData}
             handleChange={handleChange}
             getInputClass={getInputClass}
-            setContactReason={setContactReason}
-            contactReason={contactReason}
-            emailError={emailError}
             handleSubmit={handleSubmit}
+            error={error}
           />
         </div>
       )}
