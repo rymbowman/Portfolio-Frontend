@@ -7,6 +7,11 @@
   font-family: "Roboto Slab", serif;
 }
 
+.required-message {
+  color: grey;
+  font-style: italic;
+  margin: 0;
+}
 .form-row {
   width: 100%;
   display: flex;
@@ -18,6 +23,18 @@
   display: flex;
   gap: 5%;
   width: 100%;
+}
+
+.contact-reason-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.contact-reason-heading {
+  color: grey;
+  margin: 0 0 10px 0;
 }
 
 .radio-dial:hover {
