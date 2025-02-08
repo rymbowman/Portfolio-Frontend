@@ -67,6 +67,16 @@ textarea.form-item {
   resize: none;
 }
 
+/* Style autofilled inputs */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: #021526 !important;
+  color: #e2e2b6 !important;
+  border: 2px solid #e2e2b6 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #021526 inset !important;
+  -webkit-text-fill-color: #e2e2b6 !important;
+}
+
 .form-btn {
   width: 55%;
   background-color: #6eacda; /* Button color */
