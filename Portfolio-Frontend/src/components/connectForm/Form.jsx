@@ -12,11 +12,12 @@ const Form = ({
 }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <p className="required-message">* indicates a required field</p>
       <div className="names-row">
         <FormItem
           type={"text"}
           name={"fName"}
-          placeholder={"First Name"}
+          placeholder={"*First Name"}
           id={"first-name"}
           className={`form-item ${getInputClass("fName")}`}
           value={formData.fName}
@@ -25,7 +26,7 @@ const Form = ({
         <FormItem
           type={"text"}
           name={"lName"}
-          placeholder={"Last Name"}
+          placeholder={"*Last Name"}
           id={"last-name"}
           className={`form-item ${getInputClass("lName")}`}
           value={formData.lName}
@@ -35,7 +36,7 @@ const Form = ({
       <FormItem
         type={"email"}
         name={"email"}
-        placeholder={"Email"}
+        placeholder={"*Email"}
         className={`form-item ${getInputClass("email")}`}
         value={formData.email}
         onChange={handleChange}
@@ -57,7 +58,7 @@ const Form = ({
       <FormItem
         type={"text"}
         name={"subject"}
-        placeholder={"Subject"}
+        placeholder={"*Subject"}
         className={`form-item ${getInputClass("subject")}`}
         value={formData.subject}
         onChange={handleChange}
@@ -68,7 +69,7 @@ const Form = ({
           className={`form-item ${getInputClass("message")}`}
           name="message"
           rows="5"
-          placeholder="Type message here"
+          placeholder="*Type message here"
           value={formData.message}
           onChange={handleChange}
         ></textarea>
