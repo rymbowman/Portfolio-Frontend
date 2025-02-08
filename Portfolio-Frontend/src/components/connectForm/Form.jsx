@@ -32,7 +32,6 @@ const Form = ({
           onChange={handleChange}
         />
       </div>
-      {error && <p className="error-message">{error}</p>}
       <FormItem
         type={"email"}
         name={"email"}
@@ -74,6 +73,8 @@ const Form = ({
           onChange={handleChange}
         ></textarea>
       </div>
+      {error && <p className="error-message">{error}</p>}
+
       <button type="submit" className="form-btn">
         Submit
       </button>
