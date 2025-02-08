@@ -40,6 +40,9 @@
   font-size: 0.9em;
   margin-bottom: 10px;
 }
+.invalid {
+  border: 2px solid red;
+}
 
 /*Small screens (phones, etc.)*/
 @media (max-width: 767px) {
