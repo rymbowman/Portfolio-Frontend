@@ -76,7 +76,7 @@ const Form = ({
           onChange={handleChange}
         ></textarea>
       </div>
-      <button type="submit" className="btn btn-primary" id="btn-contact">
+      <button type="submit" className="form-btn">
         Submit
       </button>
     </form>
