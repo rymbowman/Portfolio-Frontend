@@ -55,8 +55,8 @@
 
 /*Small screens (phones, etc.)*/
 @media (max-width: 767px) {
-  .contact-methods {
-    gap: 0;
+  .contacts-container {
+    margin-top: 75px;
   }
 
   .contact-tooltip {

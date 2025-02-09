@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 75px;
   width: 95%;
 }
 
@@ -86,7 +85,7 @@
 
   .slideshow-images-container {
     width: 50%;
-    height: 350px;
+    height: 550px;
   }
 
   .carousel-img {
@@ -96,6 +95,9 @@
 
 /*Small screens (phones, etc.)*/
 @media (max-width: 767px) {
+  .about-container {
+    margin-top: 100px;
+  }
   .about-intro {
     font-size: 20px;
   }
@@ -122,7 +124,8 @@
   }
 
   .slideshow-images-container {
-    width: 60%;
+    width: 70%;
+    height: 500px;
   }
   .carousel-img {
     height: 100%;
@@ -133,12 +136,13 @@
 @media (max-width: 500px) {
   .slideshow-images-container {
     width: 80%;
-    height: 400px;
+    height: 475px;
   }
 }
 
 @media (max-width: 400px) {
   .slideshow-images-container {
     width: 90%;
+    height: 425px;
   }
 }
