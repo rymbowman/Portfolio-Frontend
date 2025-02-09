@@ -1,6 +1,12 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Projects.css";
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
   const projects = [
     {
       id: "blog-website",
@@ -34,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" data-aos="fade-in">
       <h2 className="projects-container-title">Projects</h2>
       <div className="tile-container">
         {projects.map((project) => (
