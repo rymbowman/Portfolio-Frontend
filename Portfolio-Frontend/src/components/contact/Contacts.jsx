@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Contacts.css";
 
 const Contacts = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
   return (
-    <div className="contacts-container">
+    <div className="contacts-container" data-aos="fade-in">
       <div className="contact-item">
         <a
           href="https://github.com/rymbowman"
