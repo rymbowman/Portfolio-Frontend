@@ -6,11 +6,9 @@
   justify-content: center;
   margin-bottom: 75px;
   width: 95%;
-  border: 1px solid white;
 }
 
 .about-intro {
-  border: 1px solid white;
   font-size: 24px;
   color: #6eacda;
   text-align: center;
@@ -21,7 +19,6 @@
   display: flex;
   margin-top: 150px;
   justify-content: space-evenly;
-  border: 1px solid white;
 }
 
 .about-headers {

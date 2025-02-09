@@ -39,7 +39,7 @@ const Projects = () => {
       <div className="tile-container">
         {projects.map((project) => (
           <div key={project.id} className="project-tile">
-            <h3 className="project-title">{project.title}</h3>
+            <h5 className="project-title">{project.title}</h5>
             <p className="project-description">{project.description}</p>
             <div className="project-links">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
