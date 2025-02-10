@@ -66,7 +66,7 @@ const Connectpage = () => {
       formData;
 
     try {
-      await fetch(`${import.meta.env.API_BASE_URL}/api/message`, {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
