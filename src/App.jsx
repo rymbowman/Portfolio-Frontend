@@ -4,7 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Mainlayout from "./layouts/mainlayout/Mainlayout";
+import Mainlayout from "./layouts/Mainlayout";
 import Homepage from "./pages/homepage/Homepage";
 import Connectpage from "./pages/connectpage/Connectpage";
 import "./App.css";
