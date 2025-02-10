@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: blog-app-client
+    name: Portfolio-Frontend
     env: static
     staticPublishPath: dist
     routes:
