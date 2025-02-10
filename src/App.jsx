@@ -4,9 +4,9 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Mainlayout from "./layouts/mainlayout/Mainlayout.jsx";
-import Homepage from "./pages/homepage/Homepage.jsx";
-import Connectpage from "./pages/connectpage/Connectpage.jsx";
+import Mainlayout from "./layouts/mainlayout/Mainlayout";
+import Homepage from "./pages/homepage/Homepage";
+import Connectpage from "./pages/connectpage/Connectpage";
 import "./App.css";
 
 const router = createBrowserRouter(
