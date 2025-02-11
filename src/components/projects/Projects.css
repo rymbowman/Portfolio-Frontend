@@ -75,6 +75,9 @@
   color: #e2e2b6;
 }
 
+.not-available-message {
+  color: #6eacda;
+}
 /* Medium Screens (tablets) */
 @media (max-width: 1199px) and (min-width: 768px) {
   .project-title {

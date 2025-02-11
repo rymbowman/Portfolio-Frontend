@@ -48,9 +48,15 @@ const Projects = () => {
             <h5 className="project-title">{project.title}</h5>
             <p className="project-description">{project.description}</p>
             <div className="project-links">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                Live Site
-              </a>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Site
+                </a>
+              ) : null}
               {project.frontendGithubLink && project.backendGithubLink ? (
                 <div className="multiple-github-links">
                   <a
@@ -68,7 +74,7 @@ const Projects = () => {
                     GitHub Repo (backend)
                   </a>
                 </div>
-              ) : (
+              ) : project.githubLink ? (
                 <a
                   href={project.githubLink}
                   target="_blank"
@@ -76,6 +82,8 @@ const Projects = () => {
                 >
                   GitHub Repo
                 </a>
+              ) : (
+                <p className="not-available-message">Not available yet</p>
               )}
             </div>
           </div>
