@@ -9,11 +9,13 @@ const HeaderBio = () => {
   }, []);
   return (
     <div className="bio-container" data-aos="fade-in">
-      <p className="career-field">Web Developer</p>
+      <p className="career-field">Javascript Engineer</p>
       <p className="bio-content">
-        Committed to continuously improving my skills in the field of web
-        development to design beautifully functioning websites and applications
-        that solve real-world business needs.
+        Aspiring Full-Stack JavaScript Engineer skilled in React, JavaScript,
+        Node.js, Express, CSS, HTML, and PostgreSQL. Leveraging experience as a
+        former high school teacher and basketball coach to bring strong
+        leadership and teamwork skills. Committed to building dynamic web
+        applications and continuously learning the latest industry trends.
       </p>
     </div>
   );
