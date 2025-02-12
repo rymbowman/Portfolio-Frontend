@@ -11,11 +11,11 @@ const HeaderBio = () => {
     <div className="bio-container" data-aos="fade-in">
       <p className="career-field">Javascript Engineer</p>
       <p className="bio-content">
-        Aspiring Full-Stack JavaScript Engineer skilled in React, JavaScript,
-        Node.js, Express, CSS, HTML, and PostgreSQL. Leveraging experience as a
-        former high school teacher and basketball coach to bring strong
-        leadership and teamwork skills. Committed to building dynamic web
-        applications and continuously learning the latest industry trends.
+        Aspiring full-stack JS engineer skilled in React, JavaScript, Node.js,
+        Express, CSS, HTML, and PostgreSQL. Leveraging experience as a former
+        high school teacher and basketball coach to bring strong leadership and
+        teamwork skills. Committed to building dynamic web applications and
+        continuously learning the latest industry trends.
       </p>
     </div>
   );
