@@ -16,6 +16,7 @@ const Connectpage = () => {
   const [success, setSuccess] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [invalidFields, setInvalidFields] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -62,6 +63,8 @@ const Connectpage = () => {
       return;
     }
 
+    setLoading(true);
+
     const { fName, lName, email, phone, contactReason, subject, message } =
       formData;
 
@@ -89,6 +92,8 @@ const Connectpage = () => {
       setInvalidFields([]);
     } catch (err) {
       setError("Error, please try again later.", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -110,6 +115,7 @@ const Connectpage = () => {
             handleSubmit={handleSubmit}
             error={error}
           />
+          {loading && <div className="loading-spinner">Sending...</div>}
         </div>
       )}
     </div>
