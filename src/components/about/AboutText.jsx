@@ -5,11 +5,10 @@ const AboutText = () => {
     <div className="about-text-container">
       <h3 className="about-headers">My Journey and Interests</h3>
       <p className="about-content">
-        My Christian faith is central to my life, guiding my decisions and
-        purpose. I have been happily married to Carly since May 2022, and we
-        live near Philadelphia with our Golden Retriever, Brody, who joined our
-        family in 2024. I am passionate about traveling and Philadelphia sports.
-        As a former high school teacher, I have had the opportunity to explore
+        I have been happily married to Carly since May 2022, and we live near
+        Philadelphia with our Golden Retriever, Brody, who joined our family in
+        2024. I am passionate about traveling and Philadelphia sports. As a
+        former high school teacher, I have had the opportunity to explore
         amazing places like Glacier National Park, the Great Wall of China, and
         northern Thailand, which have deepened my appreciation for diverse
         cultures.
